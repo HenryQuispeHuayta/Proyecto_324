@@ -11,7 +11,7 @@ $fila=mysqli_fetch_array($resultado);
 $pantalla=$fila['Pantalla'];
 $pantalla.=".motor.inc.php";
 include $pantalla;
-//echo $sql;
+// echo $sql;
 if (isset($_GET["Anterior"]))
 {
 	$sql="select * from FlujoProceso ";
@@ -23,5 +23,17 @@ if (isset($_GET["Anterior"]))
 	$procesosiguiente=$fila1["Proceso"];
 	//echo $procesosiguiente;
 }
+$sql2="select * from FlujoProceso ";
+$sql2.="where Flujo='$flujo' and Proceso='$proceso'";
+$resultado2=mysqli_query($con, $sql2);
+$fila2=mysqli_fetch_array($resultado2);
+$procesosiguiente2=$fila2["ProcesoSiguiente"];
+
+// if(!isset($procesosiguiente2)){
+// 	$sql3="SELECT * FROM `FlujoProcesoCondicionante` WHERE Flujo='$flujo' AND Proceso='$proceso'";
+// 	$resultado3=mysqli_query($con, $sql3);
+// 	$fila3=mysqli_fetch_array($resultado3);
+// 	$procesosiguiente=$fila3["ProcesoSI"];
+// }
 header("Location: principal.php?flujo=$flujo&proceso=$procesosiguiente");
 ?>
