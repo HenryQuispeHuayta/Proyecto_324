@@ -1,7 +1,7 @@
 Al dia<br>
 <input type="hidden" name="id" value=""/> <br>
-<!-- Nombre Completo -->
-<input type="hidden" name="nombrecompleto" value="<?php echo $nombrecompleto;?>" required/> <br>
+<!-- Nombre Completo
+<input type="hidden" name="nombrecompleto" value="<?php echo $nombrecompleto;?>" required/> <br> -->
 Certificado de nacimiento
 <input type="text" name="cnacimiento" value="<?php echo $cnacimiento;?>" /><br>
 Carnet de identidad
@@ -9,6 +9,7 @@ Carnet de identidad
 <!-- <input type="checkbox" name="cidentidad" id="ci"/> <br>
 <label><?php echo $cidentidad;?></label> -->
 <!-- <?php echo $proceso?> -->
+<br>
 <table>
     <tr>
         <th>Nombre Completo</th>
@@ -42,3 +43,4 @@ Carnet de identidad
         </td>
     </tr>
 </table>
+<br>

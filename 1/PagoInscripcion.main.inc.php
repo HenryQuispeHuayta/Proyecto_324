@@ -1,6 +1,6 @@
 <?php
 session_start();
 
-$proceso="P6";
+// $proceso="P6 ";
 $procesoanterior="P3";
 ?>
