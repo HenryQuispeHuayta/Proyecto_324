@@ -29,11 +29,11 @@ $resultado2=mysqli_query($con, $sql2);
 $fila2=mysqli_fetch_array($resultado2);
 $procesosiguiente2=$fila2["ProcesoSiguiente"];
 
-// if(!isset($procesosiguiente2)){
-// 	$sql3="SELECT * FROM `FlujoProcesoCondicionante` WHERE Flujo='$flujo' AND Proceso='$proceso'";
-// 	$resultado3=mysqli_query($con, $sql3);
-// 	$fila3=mysqli_fetch_array($resultado3);
-// 	$procesosiguiente=$fila3["ProcesoSI"];
-// }
+if(!isset($procesosiguiente2)){
+	$sql3="SELECT * FROM `FlujoProcesoCondicionante` WHERE Flujo='$flujo' AND Proceso='$proceso'";
+	$resultado3=mysqli_query($con, $sql3);
+	$fila3=mysqli_fetch_array($resultado3);
+	$procesosiguiente=$fila3["ProcesoSI"];
+}
 header("Location: principal.php?flujo=$flujo&proceso=$procesosiguiente");
 ?>

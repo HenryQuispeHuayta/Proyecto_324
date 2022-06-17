@@ -16,6 +16,21 @@ include $pantallalogica;
 ?>
 <html>
 <body>
+	<?php
+		session_destroy();
+		if($_SESSION["id"]){
+	?>
+			<nav>
+				<ul>
+					<li><a href="Bandeja_en.php">Bandeja</a></li>
+				</ul>
+			</nav>	
+	<?php
+		}
+		else{
+			session_destroy();
+		}
+	?>
 	Contenido<br>
 	<form action="motor.php" method="GET">
 		<!--iframe src="pantalla.php"></iframe-->
