@@ -17,7 +17,7 @@ include $pantallalogica;
 <html>
 <body>
 	<?php
-		session_destroy();
+		// session_destroy();
 		if($_SESSION["id"]){
 	?>
 			<nav>
